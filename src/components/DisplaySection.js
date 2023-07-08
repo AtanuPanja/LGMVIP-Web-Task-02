@@ -2,7 +2,6 @@ import UserCard from "./UserCard"
 import loader from '../assets/wheel-loader.png'
 
 const DisplaySection = ({showLoader,userData}) => {
-    console.log(userData)
     if(showLoader) {
         return (
         <div className="displaySection loadingDisplay">
@@ -25,7 +24,7 @@ const DisplaySection = ({showLoader,userData}) => {
                             email: user.email
                         }
                             return (
-                                <UserCard id={"user"+user} image={user.avatar} details={details}/>
+                                <UserCard id={"user"+user.id} image={user.avatar} details={details} key={user.id}/>
                             )
                         })
                     }

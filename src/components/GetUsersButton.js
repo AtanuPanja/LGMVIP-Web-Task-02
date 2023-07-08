@@ -16,7 +16,7 @@ const GetUsersButton = ({btnText,setShowLoader,setUserData}) => {
           err => {
             setShowLoader(false)
             setUserData([])
-            console.log(err)
+            // console.log(err)
           }
         )
       }, 1500); 
